@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tabbed Navigation for Spanish Recipes</title>
+    <style>
+      body {
+        font-family: Verdana, sans-serif;
+        margin: 0;
+        margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+      }
+
+      .tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        background-color: #eee;
+      }
+
+      .tablink {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #555;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 0.3s ease;
+      }
+
+      .tablink:hover {
+        border-bottom: 2px solid #555;
+      }
+
+      .tabcontent {
+        display: none;
+        padding: 20px;
+        border: 2px solid #555;
+      }
+
+      .tabcontent.show {
+        display: block;
+      }
+      
+      h1 {
+  color: #333;
+  font-size: 20px;
+}
+
+h2 {
+  color: #666;
+  font-size: 16px;
+}
+
+li {
+  color: #000;
+  font-size: 12px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+
+container {
+  font-family: verdana;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <div class="tabs">
+      <a href="#" class="tablink" onclick="openTab(event, 'recipe01')">Patatas Fritas</a>
+      <a href="#" class="tablink" onclick="openTab(event, 'recipe02')">Tortilla de Patata</a>
+      <a href="#" class="tablink" onclick="openTab(event, 'recipe03')">Salmorejo Cordobés</a>
+    </div>
+
+    <div id="recipe01" class="tabcontent show">
+      <h1>Receta Patatas Fritas</h1>
+       
+      <img src="https://abrirllave.com/html/images/patatas-fritas.jpg"/>
+      <p>Receta de patatas fritas caseras. Foto: abrirllave.com</p>
+      <h2>Ingredientes</h2>
+      <ul>
+        <li>3 ó 4 patatas</li>
+        <li>Ajos</li>
+        <li>Aceite de Oliva</li>
+        <li>Sal</li>
+      </ul>
+      <h2>Elaboración</h2>
+      <ol>
+        <li>Calentar el aceite.</li>
+        <li>Freír las patatas cortadas, la sal y los ajos.</li>
+        <li>Freir al gusto.</li>
+        <li>Servir en plato.</li>
+      </ol>
+    </div>
+
+    <div id="recipe02" class="tabcontent">
+      <h1>Tortilla de patatas con cebolla</h1>
+      
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tortilla_de_patatas.jpg/800px-Tortilla_de_patatas.jpg" alt="Tortilla de patatas con cebolla"></img>
+      <p>Receta de tortilla de patatas con cebolla. Foto: Wikimedia</p>
+              <h2>Ingredientes</h2>
+          <ul>
+            <li>5 huevos</li>
+            <li>1 kg de patatas</li>
+            <li>2 cebollas grandes</li>
+            <li>Aceite de oliva</li>
+            <li>Sal</li>
+          </ul>
+      
+          <h2>Elaboración</h2>
+          <ol>
+            <li>Pelar y cortar las patatas y las cebollas en rodajas finas.</li>
+            <li>En una sartén grande, calentar aceite de oliva y añadir las patatas y las cebollas.</li>
+            <li>Cocinar a fuego medio-bajo hasta que las patatas estén tiernas, removiendo de vez en cuando.</li>
+            <li>Mientras tanto, batir los huevos en un bol grande y añadir sal al gusto.</li>
+            <li>Cuando las patatas estén tiernas, retirar del fuego y escurrir el exceso de aceite.</li>
+            <li>Añadir las patatas y las cebollas al bol de los huevos y mezclar bien.</li>
+            <li>En la misma sartén donde se cocinaron las patatas y las cebollas, calentar un poco más de aceite de oliva.</li>
+            <li>Verter la mezcla de patatas y huevos en la sartén y cocinar a fuego medio-bajo durante unos 10 minutos.</li>
+            <li>Para darle la vuelta a la tortilla, colocar un plato grande sobre la sartén y voltear la tortilla sobre el plato.</li>
+            <li>Volver a poner la tortilla en la sartén y cocinar durante otros 5-10 minutos hasta que esté dorada por ambos lados.</li>
+            <li>Servir caliente o fría, cortada en porciones.</li>
+          </ol>
+    </div>
+
+    <div id="recipe03" class="tabcontent">
+       <h1>Receta Salmorejo</h1>
+      
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Salmorejo_cordobes.jpg"/>
+      <p>Receta de salmorejo cordobés. Foto: Wikimedia</p>
+                <h2>Ingredientes</h2>
+          <ul>
+            <li>1 kg de tomates maduros</li>
+            <li>200 g de miga de pan</li>
+            <li>1 diente de ajo</li>
+            <li>100 ml de aceite de oliva virgen extra</li>
+            <li>50 ml de vinagre de jerez</li>
+            <li>Sal al gusto</li>
+            <li>1 huevo duro y jamón serrano para decorar</li>
+          </ul>
+       
+               <h2>Elaboración</h2>
+          <ol>
+            <li>Pelar los tomates y cortarlos en trozos.</li>
+            <li>Remojar la miga de pan en agua y escurrir.</li>
+            <li>Poner los tomates, la miga de pan, el ajo pelado, el aceite de oliva, el vinagre y la sal en una batidora.</li>
+            <li>Triturar todos los ingredientes hasta que quede una crema fina.</li>
+            <li>Dejar enfriar en la nevera durante al menos 2 horas.</li>
+            <li>Servir en plato con el huevo duro y el jamón serrano picados por encima.</li>
+          </ol>
+    </div>
+ </div>
+ 
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].classList.remove("show");
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("active");
+        }
+        document.getElementById(tabName).classList.add("show");
+        evt.currentTarget.classList.add("active");
+      }
+      document.getElementsByClassName("tablink")[0].click();
+    </script>
+  </body>
+</html>
